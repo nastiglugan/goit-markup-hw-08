@@ -1,0 +1,11 @@
+.logo {
+  @extend %reset-link;
+
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo__excerpt--blue {
+  color: var(--color-blue);
+}

@@ -1,0 +1,24 @@
+.subscribe-form {
+  display: flex;
+  gap: 12px;
+}
+
+.subscribe-form__input {
+  padding: 16px;
+  width: 358px;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.subscribe-form__icon {
+  margin-left: 10px;
+  fill: currentColor;
+}

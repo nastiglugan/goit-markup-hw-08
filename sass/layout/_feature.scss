@@ -1,0 +1,25 @@
+.feature {
+  @include section();
+}
+.feature__wrapper-icon {
+  @include flex-center();
+
+  padding: 25px;
+  margin-bottom: 30px;
+
+  background-color: var(--background-color-light);
+}
+
+.feature__list {
+  @extend %reset-list;
+}
+
+.feature__title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.feature__desc {
+  color: var(--color-ligt);
+}

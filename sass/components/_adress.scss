@@ -1,0 +1,28 @@
+.adress {
+  font-style: normal;
+}
+
+.adress__list {
+  @extend %reset-list;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__link {
+  @extend %reset-link;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.adress__link--white {
+  color: var(--color-white);
+}
+.adress__link--active {
+  transition: color var(--transition-basic);
+
+  &:hover,
+  &:focus {
+    color: var(--color-blue);
+  }
+}
