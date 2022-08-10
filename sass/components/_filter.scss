@@ -2,8 +2,17 @@
   @extend %reset-list;
 
   display: flex;
-  justify-content: center;
-  gap: 8px;
+
+  @media screen and (min-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    gap: 8px;
+  }
 }
 .filter__btn {
   padding: 6px 22px;

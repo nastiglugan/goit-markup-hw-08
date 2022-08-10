@@ -18,7 +18,17 @@
 .portfolio__list {
   @extend %reset-list;
 
-  --items: 3;
+  @media screen and (min-width: 480px) {
+    --items: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
 }
 
 .portfolio__link {

@@ -1,6 +1,25 @@
 .feature {
   @include section();
 }
+
+.feature__list {
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 480px) {
+    --items: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+  }
+}
+
 .feature__wrapper-icon {
   @include flex-center();
 
