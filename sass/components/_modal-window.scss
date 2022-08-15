@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  max-width: 528px;
+  max-width: 450px;
   padding: 40px;
 
   background-color: var(--color-white);
@@ -12,6 +12,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--transition-basic);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
 .modal__btn {
   position: absolute;

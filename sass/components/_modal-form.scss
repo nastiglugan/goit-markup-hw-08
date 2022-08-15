@@ -7,8 +7,12 @@
   display: block;
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: calc(23 / 20);
+  line-height: calc(30 / 20);
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    line-height: calc(23 / 20);
+  }
 }
 
 .modal-form__content {
@@ -63,11 +67,16 @@
   resize: none;
 
   &::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
+    font-size: 14px;
+    line-height: calc(16 / 14);
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
   }
 
   &:hover,
@@ -122,11 +131,16 @@
 }
 
 .modal-checkbox__text {
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   color: var(--color-ligt);
   user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 .modal-checkbox__link {
   position: relative;

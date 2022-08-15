@@ -67,13 +67,14 @@
 }
 
 .footer__subscribe-wrapper {
-  @media screen and (max-width: 1199px) {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 470px) {
     width: 450px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-left: auto;
+    margin-right: 0;
   }
 }
