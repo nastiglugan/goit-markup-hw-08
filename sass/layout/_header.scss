@@ -8,18 +8,41 @@
 .header__container {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .header__logo {
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .header__contact-list {
   @extend %reset-list;
 
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    margin-left: auto;
+    gap: 50px;
+  }
 }
 
 .header__contact-link {

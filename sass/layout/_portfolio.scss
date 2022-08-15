@@ -18,9 +18,7 @@
 .portfolio__list {
   @extend %reset-list;
 
-  @media screen and (min-width: 480px) {
-    --items: 1;
-  }
+  --items: 1;
 
   @media screen and (min-width: 768px) {
     --items: 2;

@@ -22,11 +22,16 @@
   </head>
   <body>
     <!--Header section-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a href="" class="logo header__logo"
           ><span class="logo__excerpt logo__excerpt--blue">Web</span>Studio</a
         >
+        <buttom class="mobile__btn" type="buttom" data-menu-open>
+          <svg class="mobile__icon" width="40" height="40">
+            <use href="./images/icons/icon.svg#burger_menu"></use>
+          </svg>
+        </buttom>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -64,7 +69,7 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <!--Main section-->
     <main>
@@ -93,13 +98,67 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-1.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_lg.webp 1x,
+                        ./images/portfolio/img-1@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_lg.jpg 1x,
+                        ./images/portfolio/img-1@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_md.webp 1x,
+                        ./images/portfolio/img-1@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_md.jpg 1x,
+                        ./images/portfolio/img-1@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_sm.webp 1x,
+                        ./images/portfolio/img-1@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-1@1x_sm.jpg 1x,
+                        ./images/portfolio/img-1@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-1@1x_sm.jpg"
+                      alt="Веб-сайт"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -117,13 +176,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-2.jpg"
-                    alt="Постер с баскетболистами"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_lg.webp 1x,
+                        ./images/portfolio/img-2@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_lg.jpg 1x,
+                        ./images/portfolio/img-2@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_md.webp 1x,
+                        ./images/portfolio/img-2@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_md.jpg 1x,
+                        ./images/portfolio/img-2@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_sm.webp 1x,
+                        ./images/portfolio/img-2@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-2@1x_sm.jpg 1x,
+                        ./images/portfolio/img-2@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-2@1x_sm.jpg"
+                      alt="Постер с баскетболистами"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -141,13 +253,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-3.jpg"
-                    alt="Логотип рыбного ресторана"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_lg.webp 1x,
+                        ./images/portfolio/img-3@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_lg.jpg 1x,
+                        ./images/portfolio/img-3@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_md.webp 1x,
+                        ./images/portfolio/img-3@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_md.jpg 1x,
+                        ./images/portfolio/img-3@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_sm.webp 1x,
+                        ./images/portfolio/img-3@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-3@1x_sm.jpg 1x,
+                        ./images/portfolio/img-3@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-3@1x_sm.jpg"
+                      alt="Логотип рыбного ресторана"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -165,13 +330,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_lg.webp 1x,
+                        ./images/portfolio/img-4@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_lg.jpg 1x,
+                        ./images/portfolio/img-4@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_md.webp 1x,
+                        ./images/portfolio/img-4@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_md.jpg 1x,
+                        ./images/portfolio/img-4@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_sm.webp 1x,
+                        ./images/portfolio/img-4@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-4@1x_sm.jpg 1x,
+                        ./images/portfolio/img-4@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-4@1x_sm.jpg"
+                      alt="Наушники"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -189,13 +407,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-5.jpg"
-                    alt="Белая и бежевая коробка"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_lg.webp 1x,
+                        ./images/portfolio/img-5@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_lg.jpg 1x,
+                        ./images/portfolio/img-5@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_md.webp 1x,
+                        ./images/portfolio/img-5@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_md.jpg 1x,
+                        ./images/portfolio/img-5@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_sm.webp 1x,
+                        ./images/portfolio/img-5@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-5@1x_sm.jpg 1x,
+                        ./images/portfolio/img-5@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-5@1x_sm.jpg"
+                      alt="Белая и бежевая коробка"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -213,13 +484,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-6.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_lg.webp 1x,
+                        ./images/portfolio/img-6@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_lg.jpg 1x,
+                        ./images/portfolio/img-6@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_md.webp 1x,
+                        ./images/portfolio/img-6@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_md.jpg 1x,
+                        ./images/portfolio/img-6@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_sm.webp 1x,
+                        ./images/portfolio/img-6@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-6@1x_sm.jpg 1x,
+                        ./images/portfolio/img-6@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-6@1x_sm.jpg"
+                      alt="Веб-сайт"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -237,13 +561,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-7.jpg"
-                    alt="Дизайн издания"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_lg.webp 1x,
+                        ./images/portfolio/img-7@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_lg.jpg 1x,
+                        ./images/portfolio/img-7@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_md.webp 1x,
+                        ./images/portfolio/img-7@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_md.jpg 1x,
+                        ./images/portfolio/img-7@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_sm.webp 1x,
+                        ./images/portfolio/img-7@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-7@1x_sm.jpg 1x,
+                        ./images/portfolio/img-7@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-7@1x_sm.jpg"
+                      alt="Дизайн издания"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -261,13 +638,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-8.jpg"
-                    alt="этикетка бренда"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_lg.webp 1x,
+                        ./images/portfolio/img-8@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_lg.jpg 1x,
+                        ./images/portfolio/img-8@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_md.webp 1x,
+                        ./images/portfolio/img-8@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_md.jpg 1x,
+                        ./images/portfolio/img-8@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_sm.webp 1x,
+                        ./images/portfolio/img-8@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-8@1x_sm.jpg 1x,
+                        ./images/portfolio/img-8@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-8@1x_sm.jpg"
+                      alt="этикетка бренда"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -285,13 +715,66 @@
             <li class="portfolio__item card-item">
               <a href="" class="portfolio__link" target="_blank" rel="noopener noreferrer">
                 <div class="portfolio__wrapper">
-                  <img
-                    src="./images/portfolio/img-9.jpg"
-                    alt="Ноутбук с сайтом"
-                    width="370"
-                    height="294"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_lg.webp 1x,
+                        ./images/portfolio/img-9@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_lg.jpg 1x,
+                        ./images/portfolio/img-9@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_md.webp 1x,
+                        ./images/portfolio/img-9@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_md.jpg 1x,
+                        ./images/portfolio/img-9@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_sm.webp 1x,
+                        ./images/portfolio/img-9@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-9@1x_sm.jpg 1x,
+                        ./images/portfolio/img-9@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="portfolio_img"
+                      src="/images/portfolio/img-9@1x_sm.jpg"
+                      alt="Ноутбук с сайтом"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -418,7 +901,73 @@
             </button>
           </form>
         </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile" data-menu>
+          <buttom class="mobile__btn mobile__btn--close" type="buttom" data-menu-close>
+            <svg class="mobile__icon" width="40" height="40">
+              <use href="./images/icons/icon.svg#menu_close"></use>
+            </svg>
+          </buttom>
+
+          <nav class="mobile__nav">
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a href="./index.html" class="mobile__link mobile__link__link--active">Студия</a>
+              </li>
+              <li class="mobile__item">
+                <a href="./portfolio.html" class="mobile__link mobile__link__link--active"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile__item">
+                <a href="#contacts" class="mobile__link mobile__link__link--active">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile__contact-list">
+            <li class="mobile__contact-item">
+              <a href="tel:+380961111111" class="mobile__contact-link mobile__contact-link--blue">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile__contact-item">
+              <a href="mailto:info@devstudio.com" class="mobile__contact-link"
+                >info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile__social-list">
+            <li class="mobile__social-item">
+              <a class="mobile__social-link" href="" target="_blank" rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link" href="" target="_blank" rel="noopener noreferrer"
+                >Twitter
+              </a>
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link" href="" target="_blank" rel="noopener noreferrer">
+                Facebook</a
+              >
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link" href="" target="_blank" rel="noopener noreferrer"
+                >LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

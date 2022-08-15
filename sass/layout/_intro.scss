@@ -6,25 +6,70 @@
 }
 
 .intro__title {
-  width: 696px;
+  width: 360px;
+
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+  }
 }
 
 .overlay {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg/bg.jpg);
+
   background-color: var(--background-color-gray);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  //mobile screen
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg/bg@1x_sm.jpg');
+  // background-image: -webkit-image-set(url('../images/bg/bg@1x_sm.webp') 1x);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg/bg@2x_sm.jpg');
+    // background-image: -webkit-image-set(url('../images/bg/bg@2x_sm.webp') 2x);
+  }
+
+  //tablet screen
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg/bg@1x_md.jpg');
+    // background-image: -webkit-image-set(url('../images/bg/bg@1x_md.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg/bg@2x_md.jpg');
+      // background-image: -webkit-image-set(url('../images/bg/bg@2x_md.webp') 2x);
+    }
+  }
+  //desktop sreen
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg/bg@1x_lg.jpg');
+    // background-image: -webkit-image-set(url('../images/bg/bg@1x_lg.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg/bg@2x_lg.jpg');
+      // background-image: -webkit-image-set(url('../images/bg/bg@2x_lg.webp') 2x);
+    }
+  }
 }
