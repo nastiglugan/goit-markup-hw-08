@@ -107,7 +107,8 @@
 }
 
 .modal-checkbox__icon {
-  display: inline-block;
+  display: inline-flex;
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   border: 2px solid var(--color-dark);

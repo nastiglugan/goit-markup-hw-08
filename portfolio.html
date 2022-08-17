@@ -27,11 +27,11 @@
         <a href="" class="logo header__logo"
           ><span class="logo__excerpt logo__excerpt--blue">Web</span>Studio</a
         >
-        <buttom class="mobile__btn" type="buttom" data-menu-open>
+        <button class="mobile__btn" type="button" data-menu-open>
           <svg class="mobile__icon" width="40" height="40">
             <use href="./images/icons/icon.svg#burger_menu"></use>
           </svg>
-        </buttom>
+        </button>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -904,24 +904,26 @@
 
         <!-- Mobile menu -->
         <div class="mobile" data-menu>
-          <buttom class="mobile__btn mobile__btn--close" type="buttom" data-menu-close>
+          <button class="mobile__btn mobile__btn--close" type="button" data-menu-close>
             <svg class="mobile__icon" width="40" height="40">
               <use href="./images/icons/icon.svg#menu_close"></use>
             </svg>
-          </buttom>
+          </button>
 
           <nav class="mobile__nav">
             <ul class="mobile__list">
               <li class="mobile__item">
-                <a href="./index.html" class="mobile__link mobile__link__link--active">Студия</a>
+                <a href="./index.html" class="mobile__link mobile__link--active">Студия</a>
               </li>
               <li class="mobile__item">
-                <a href="./portfolio.html" class="mobile__link mobile__link__link--active"
+                <a
+                  href="./portfolio.html"
+                  class="mobile__link mobile__link--active mobile__link--current"
                   >Портфолио</a
                 >
               </li>
               <li class="mobile__item">
-                <a href="#contacts" class="mobile__link mobile__link__link--active">Контакты</a>
+                <a href="#contacts" class="mobile__link mobile__link--active">Контакты</a>
               </li>
             </ul>
           </nav>

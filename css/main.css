@@ -53,6 +53,9 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -80,6 +83,11 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 470px) {
+  .container {
+    width: 470px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -323,6 +331,7 @@ img {
   visibility: visible;
   -webkit-transition: opacity var(--transition-basic), visibility var(--transition-basic);
   transition: opacity var(--transition-basic), visibility var(--transition-basic);
+  overflow-y: scroll;
 }
 
 .backdrop--is-hidden {
@@ -343,6 +352,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 450px;
+  width: 100%;
   padding: 40px;
   background-color: var(--color-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -552,7 +562,11 @@ img {
 }
 
 .modal-checkbox__icon {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 16px;
   height: 15px;
   border: 2px solid var(--color-dark);
@@ -696,6 +710,13 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100%;
   padding: 40px 50px 48px 40px;
@@ -747,12 +768,13 @@ img {
   right: 15px;
 }
 
-.mobile__btn:active .mobile__icon {
+.mobile__btn:hover,
+.mobile__btn:focus .mobile__icon {
   fill: var(--color-blue);
 }
 
 .mobile__nav {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .mobile__item:not(:last-child) {
@@ -767,11 +789,15 @@ img {
   color: var(--color-dark);
 }
 
-.mobile__link__link--active {
+.mobile__link--active {
   -webkit-transition: color var(--transition-basic);
   transition: color var(--transition-basic);
 }
-.mobile__link__link--active:hover, .mobile__link__link--active:focus {
+.mobile__link--active:hover, .mobile__link--active:focus {
+  color: var(--color-blue);
+}
+
+.mobile__link--current {
   color: var(--color-blue);
 }
 
@@ -910,10 +936,16 @@ img {
 }
 
 .intro {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   color: var(--color-white);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .intro {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .intro__title {
