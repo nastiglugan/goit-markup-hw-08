@@ -216,9 +216,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .subscribe-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -232,6 +229,7 @@ img {
 
 .subscribe-form__input {
   width: 100%;
+  max-width: 450px;
   padding: 16px;
   color: var(--color-white);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -262,11 +260,6 @@ img {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-}
-@media screen and (min-width: 1200px) {
-  .subscribe-form__input {
-    width: 358px;
-  }
 }
 
 .subscribe-form__icon {
@@ -346,11 +339,12 @@ img {
 }
 
 .modal {
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 10%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  max-height: 609px;
   max-width: 450px;
   width: 100%;
   padding: 40px;
@@ -362,6 +356,14 @@ img {
   transition: -webkit-transform var(--transition-basic);
   transition: transform var(--transition-basic);
   transition: transform var(--transition-basic), -webkit-transform var(--transition-basic);
+}
+@media screen and (min-width: 470px) and (min-height: 609px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -613,11 +615,6 @@ img {
 
 .adress {
   font-style: normal;
-}
-@media screen and (min-width: 470px) {
-  .adress {
-    margin-bottom: 60px;
-  }
 }
 
 .adress__item:not(:last-child) {
@@ -917,7 +914,15 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  font-size: 12px;
+  line-height: 1.1666666667;
   color: var(--color-ligt);
+}
+@media screen and (min-width: 1200px) {
+  .header__contact-link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
 }
 
 .header__contact-link--active {
@@ -1054,6 +1059,12 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .feature__title {
+    text-align: left;
+  }
 }
 
 .feature__desc {
@@ -1228,25 +1239,22 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
-  .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1254,11 +1262,22 @@ img {
   }
 }
 
+.footer__tablet-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer__tablet-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1268,12 +1287,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__tablet-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     gap: 70px;
   }
 }
@@ -1305,10 +1318,6 @@ img {
   }
 }
 
-.footer__social-wrapper {
-  margin-bottom: 60px;
-}
-
 .footer__social {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
@@ -1317,6 +1326,7 @@ img {
 .footer__subscribe-wrapper {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media screen and (min-width: 470px) {
   .footer__subscribe-wrapper {
@@ -1325,6 +1335,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__subscribe-wrapper {
+    width: 570px;
     margin-right: 0;
   }
 }
@@ -1345,6 +1356,9 @@ img {
 }
 
 .portfolio__container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 20px;
   padding-left: 24px;
   padding-bottom: 20px;
@@ -1368,7 +1382,14 @@ img {
 }
 
 .portfolio__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow var(--transition-basic);
   transition: -webkit-box-shadow var(--transition-basic);
   transition: box-shadow var(--transition-basic);
@@ -1401,6 +1422,9 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
   -webkit-transform: translateY(100%);
@@ -1410,9 +1434,13 @@ img {
   transition: transform var(--transition-basic), opacity var(--transition-basic);
   transition: transform var(--transition-basic), opacity var(--transition-basic), -webkit-transform var(--transition-basic);
 }
+@media screen and (min-width: 470px) {
+  .portfolio__overlay {
+    padding: 63px 23px;
+  }
+}
 
 .portfolio__overlay-desc {
-  padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5555555556;
