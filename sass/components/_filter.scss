@@ -6,10 +6,15 @@
   justify-content: flex-start;
   gap: 8px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     justify-content: center;
     gap: 8px;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   justify-content: center;
+  //   gap: 8px;
+  // }
 }
 .filter__btn {
   padding: 6px 22px;

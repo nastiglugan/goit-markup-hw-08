@@ -21,9 +21,10 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-  @media screen and (min-width: 1200px) {
-    max-width: 528px;
+    @include mq(desk) {
+     max-width: 528px;
   }
+
 }
 .modal__btn {
   position: absolute;

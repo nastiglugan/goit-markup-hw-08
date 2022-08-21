@@ -20,9 +20,13 @@
 
   transition: opacity var(--transition-basic) visibility var(--transition-basic);
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     display: none;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   display: none;
+  // }
 
   &.is-open {
     opacity: 1;
@@ -46,9 +50,13 @@
 
   transition: fill var(--transition-basic);
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     display: none;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   display: none;
+  // }
 }
 
 .mobile__btn--close {

@@ -3,11 +3,17 @@
   flex-direction: column;
   gap: 30px;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     flex-direction: row;
     align-items: center;
     gap: 12px;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   gap: 12px;
+  // }
 }
 
 .subscribe-form__input {

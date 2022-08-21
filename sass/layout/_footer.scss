@@ -10,11 +10,17 @@
   flex-direction: column;
   gap: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     flex-direction: row;
     align-items: baseline;
     gap: 70px;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   flex-direction: row;
+  //   align-items: baseline;
+  //   gap: 70px;
+  // }
 }
 
 .footer__tablet-wrapper {
@@ -22,23 +28,37 @@
   flex-direction: column;
   gap: 60px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-around;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     gap: 70px;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   flex-direction: row;
+  //   align-items: baseline;
+  //   justify-content: space-around;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   gap: 70px;
+  // }
 }
 
 .footer__logo-wrapper {
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     text-align: left;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   text-align: left;
+  // }
 }
 
 .footer__logo {
@@ -53,9 +73,13 @@
   font-size: 14px;
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
-    text-align: left;
+  @include mq(desk) {
+    ext-align: left;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   text-align: left;
+  // }
 }
 
 .footer__social {
@@ -68,12 +92,21 @@
   margin-right: auto;
   width: 100%;
 
-  @media screen and (min-width: 470px) {
+  @include mq(tab) {
     width: 450px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     width: 570px;
     margin-right: 0;
   }
+
+  // @media screen and (min-width: 470px) {
+  //   width: 450px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   width: 570px;
+  //   margin-right: 0;
+  // }
 }

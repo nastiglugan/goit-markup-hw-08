@@ -5,13 +5,21 @@
 .feature__list {
   --items: 1;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     --items: 2;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     --items: 4;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   --items: 2;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   --items: 4;
+  // }
 }
 
 .feature__wrapper-icon {
@@ -34,9 +42,13 @@
   text-transform: uppercase;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     text-align: left;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   text-align: left;
+  // }
 }
 .feature__desc {
   color: var(--color-ligt);

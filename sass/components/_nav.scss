@@ -1,8 +1,12 @@
-.nav {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
+// .nav {
+//   // @include mq(mob-only) {
+//   //   display: none;
+//   // }
+
+//   // // @media screen and (max-width: 767px) {
+//   // //   display: none;
+//   // // }
+// }
 .nav__list {
   @extend %reset-list;
 

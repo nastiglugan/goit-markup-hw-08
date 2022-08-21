@@ -13,3 +13,33 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin mq($range) {
+  $mob: 470px;
+  $tab: 768px;
+  $desk: 1200px;
+
+  @if $range==mob {
+    @media screen and (min-width: $mob) {
+      @content;
+    }
+  }
+
+  @if $range==mob-only {
+    @media screen and (min-width: #{tab-0.02}) {
+      @content;
+    }
+  }
+
+  @if $range==tab {
+    @media screen and (min-width: $tab) {
+      @content;
+    }
+  }
+
+  @if $range==desk {
+    @media screen and (min-width: $desk) {
+      @content;
+    }
+  }
+}

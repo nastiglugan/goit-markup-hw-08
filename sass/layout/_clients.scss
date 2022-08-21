@@ -6,13 +6,21 @@
 
   --items: 2;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     --items: 3;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     --items: 6;
   }
+
+  // @media screen and (min-width: 768px) {
+  //   --items: 3;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   --items: 6;
+  // }
 }
 
 .clients__link {

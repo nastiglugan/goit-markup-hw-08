@@ -4,10 +4,15 @@
   color: var(--color-white);
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     padding-top: 200px;
     padding-bottom: 200px;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   padding-top: 200px;
+  //   padding-bottom: 200px;
+  // }
 }
 
 .intro__title {
